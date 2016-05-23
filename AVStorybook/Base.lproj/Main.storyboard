@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="no8-67-t1o">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Story Part View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="storyPartViewController" id="BYZ-38-t0r" customClass="StoryPartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnS-UX-npq">
+                                <rect key="frame" x="15" y="477" width="74" height="30"/>
+                                <state key="normal" title="Add Image"/>
+                                <connections>
+                                    <action selector="showImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vdq-h5-ZMq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-g6-K2n">
+                                <rect key="frame" x="514" y="477" width="71" height="30"/>
+                                <state key="normal" title="Add Audio"/>
+                                <connections>
+                                    <action selector="startAudioRecorder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCW-Xw-fgS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sul-ew-DBE">
+                                <rect key="frame" x="15" y="90" width="570" height="360"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5ZJ-yv-XPW" appends="YES" id="9yE-2a-f8p"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sul-ew-DBE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.9" id="7zx-0J-nRs"/>
+                            <constraint firstItem="sul-ew-DBE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="II4-b4-12t"/>
+                            <constraint firstItem="aYr-g6-K2n" firstAttribute="top" secondItem="sul-ew-DBE" secondAttribute="bottom" constant="27" id="JgU-oZ-f1o"/>
+                            <constraint firstItem="sul-ew-DBE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.95" id="QZR-Xx-j3Z"/>
+                            <constraint firstItem="cnS-UX-npq" firstAttribute="top" secondItem="sul-ew-DBE" secondAttribute="bottom" constant="27" id="VkM-OT-R8r"/>
+                            <constraint firstItem="sul-ew-DBE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="jzP-pF-nIN"/>
+                            <constraint firstItem="aYr-g6-K2n" firstAttribute="trailing" secondItem="sul-ew-DBE" secondAttribute="trailing" id="kQf-MO-TT8"/>
+                            <constraint firstItem="cnS-UX-npq" firstAttribute="leading" secondItem="sul-ew-DBE" secondAttribute="leading" id="yqA-Zx-vPZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addAudio" destination="aYr-g6-K2n" id="kLX-6t-ODv"/>
+                        <outlet property="addImage" destination="cnS-UX-npq" id="9F2-5j-oUo"/>
+                        <outlet property="imageTapGR" destination="5ZJ-yv-XPW" id="A8G-rP-rcd"/>
+                        <outlet property="imageView" destination="sul-ew-DBE" id="qqx-Oi-oqQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5ZJ-yv-XPW">
+                    <connections>
+                        <action selector="tappedImage:" destination="BYZ-38-t0r" id="qmn-6Y-xLE"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="399" y="237"/>
+        </scene>
+        <!--Story Book View Controller-->
+        <scene sceneID="bEh-bG-oi3">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="no8-67-t1o" customClass="StoryBookViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBP-7W-elT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="355" y="1012"/>
+        </scene>
+    </scenes>
+</document>
