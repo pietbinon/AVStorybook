@@ -64,8 +64,6 @@
 		77521F8D1CF26B29002DD382 /* AVStorybook */ = {
 			isa = PBXGroup;
 			children = (
-				77521F911CF26B29002DD382 /* AppDelegate.h */,
-				77521F921CF26B29002DD382 /* AppDelegate.m */,
 				77521FA51CF26DAC002DD382 /* PageDataModel.h */,
 				77521FA61CF26DAC002DD382 /* PageDataModel.m */,
 				77521FAE1CF27078002DD382 /* StoryPartViewController.h */,
@@ -73,8 +71,6 @@
 				77521FB11CF29431002DD382 /* StoryBookViewController.h */,
 				77521FB21CF29431002DD382 /* StoryBookViewController.m */,
 				77521F971CF26B29002DD382 /* Main.storyboard */,
-				77521F9A1CF26B29002DD382 /* Assets.xcassets */,
-				77521F9C1CF26B29002DD382 /* LaunchScreen.storyboard */,
 				77521F9F1CF26B29002DD382 /* Info.plist */,
 				77521F8E1CF26B29002DD382 /* Supporting Files */,
 			);
@@ -84,7 +80,11 @@
 		77521F8E1CF26B29002DD382 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				77521F911CF26B29002DD382 /* AppDelegate.h */,
+				77521F921CF26B29002DD382 /* AppDelegate.m */,
 				77521F8F1CF26B29002DD382 /* main.m */,
+				77521F9A1CF26B29002DD382 /* Assets.xcassets */,
+				77521F9C1CF26B29002DD382 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -312,6 +312,7 @@
 				77521FA41CF26B29002DD382 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
