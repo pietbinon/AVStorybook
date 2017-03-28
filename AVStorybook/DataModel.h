@@ -1,5 +1,5 @@
 //
-//  PageDataModel.h
+//  DataModel.h
 //  AVStorybook
 //
 //  Created by Pierre Binon on 2017-03-27.
@@ -12,7 +12,7 @@
 
 
 
-@interface PageDataModel : NSObject
+@interface DataModel : NSObject
 
 @property (nonatomic) UIImage *image;
 @property (nonatomic) int pageIndex;

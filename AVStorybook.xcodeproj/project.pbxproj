@@ -12,7 +12,7 @@
 		77521F991CF26B29002DD382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77521F971CF26B29002DD382 /* Main.storyboard */; };
 		77521F9B1CF26B29002DD382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77521F9A1CF26B29002DD382 /* Assets.xcassets */; };
 		77521F9E1CF26B29002DD382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77521F9C1CF26B29002DD382 /* LaunchScreen.storyboard */; };
-		77521FA71CF26DAC002DD382 /* PageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 77521FA61CF26DAC002DD382 /* PageDataModel.m */; };
+		77521FA71CF26DAC002DD382 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 77521FA61CF26DAC002DD382 /* DataModel.m */; };
 		77521FB01CF27078002DD382 /* StoryPartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77521FAF1CF27078002DD382 /* StoryPartViewController.m */; };
 		77521FB31CF29431002DD382 /* StoryBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77521FB21CF29431002DD382 /* StoryBookViewController.m */; };
 /* End PBXBuildFile section */
@@ -26,8 +26,8 @@
 		77521F9A1CF26B29002DD382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77521F9D1CF26B29002DD382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77521F9F1CF26B29002DD382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77521FA51CF26DAC002DD382 /* PageDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageDataModel.h; sourceTree = "<group>"; };
-		77521FA61CF26DAC002DD382 /* PageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageDataModel.m; sourceTree = "<group>"; };
+		77521FA51CF26DAC002DD382 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		77521FA61CF26DAC002DD382 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		77521FAE1CF27078002DD382 /* StoryPartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPartViewController.h; sourceTree = "<group>"; };
 		77521FAF1CF27078002DD382 /* StoryPartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPartViewController.m; sourceTree = "<group>"; };
 		77521FB11CF29431002DD382 /* StoryBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryBookViewController.h; sourceTree = "<group>"; };
@@ -64,8 +64,8 @@
 		77521F8D1CF26B29002DD382 /* AVStorybook */ = {
 			isa = PBXGroup;
 			children = (
-				77521FA51CF26DAC002DD382 /* PageDataModel.h */,
-				77521FA61CF26DAC002DD382 /* PageDataModel.m */,
+				77521FA51CF26DAC002DD382 /* DataModel.h */,
+				77521FA61CF26DAC002DD382 /* DataModel.m */,
 				77521FAE1CF27078002DD382 /* StoryPartViewController.h */,
 				77521FAF1CF27078002DD382 /* StoryPartViewController.m */,
 				77521FB11CF29431002DD382 /* StoryBookViewController.h */,
@@ -115,7 +115,7 @@
 		77521F831CF26B29002DD382 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Enoch Ng";
 				TargetAttributes = {
 					77521F8A1CF26B29002DD382 = {
@@ -160,7 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77521F931CF26B29002DD382 /* AppDelegate.m in Sources */,
-				77521FA71CF26DAC002DD382 /* PageDataModel.m in Sources */,
+				77521FA71CF26DAC002DD382 /* DataModel.m in Sources */,
 				77521F901CF26B29002DD382 /* main.m in Sources */,
 				77521FB31CF29431002DD382 /* StoryBookViewController.m in Sources */,
 				77521FB01CF27078002DD382 /* StoryPartViewController.m in Sources */,
@@ -203,8 +203,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -247,8 +249,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

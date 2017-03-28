@@ -9,7 +9,7 @@
 
 #import "StoryBookViewController.h"
 #import "StoryPartViewController.h"
-#import "PageDataModel.h"
+#import "DataModel.h"
 
 
 
@@ -35,14 +35,14 @@
     
     for (int i = 0; i < 5; i ++) {
     
-        PageDataModel *pageModel = [[PageDataModel alloc] initWithIndex: i];
+        DataModel *pageModel = [[DataModel alloc] initWithIndex: i];
         
         [self.storyPages addObject: pageModel];
     }
 
     StoryPartViewController *firstPartViewController = [self.storyboard instantiateViewControllerWithIdentifier: @"storyPartViewController"];
     
-    PageDataModel *retrievedPageDataModel = self.storyPages[0];
+    DataModel *retrievedPageDataModel = self.storyPages[0];
     
     firstPartViewController.pageDataModel = retrievedPageDataModel;
     
@@ -61,7 +61,7 @@
         
         StoryPartViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier: @"storyPartViewController"];
         
-        PageDataModel *retrievedPageDataModel = self.storyPages[index];
+        DataModel *retrievedPageDataModel = self.storyPages[index];
         
         controller.pageDataModel = retrievedPageDataModel;
         return controller;
@@ -81,7 +81,7 @@
         
         StoryPartViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier: @"storyPartViewController"];
         
-        PageDataModel *retrievedPageDataModel = self.storyPages[index];
+        DataModel *retrievedPageDataModel = self.storyPages[index];
         
         controller.pageDataModel = retrievedPageDataModel;
         return controller;

@@ -1,5 +1,5 @@
 //
-//  PageDataModel.m
+//  DataModel.m
 //  AVStorybook
 //
 //  Created by Pierre Binon on 2017-03-27.
@@ -7,11 +7,11 @@
 //
 //!!!DON'T FORGET TO ADD AUTHORIZATION TO USE PHOTOS IN INFO.PLIST!!!
 
-#import "PageDataModel.h"
+#import "DataModel.h"
 
 
 
-@implementation PageDataModel
+@implementation DataModel
 
 - (instancetype) initWithIndex: (int) index
 {

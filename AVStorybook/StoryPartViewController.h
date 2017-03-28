@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PageDataModel.h"
+#import "DataModel.h"
 
 
 
 @interface StoryPartViewController : UIViewController
 
-@property (nonatomic) PageDataModel *pageDataModel;
+@property (nonatomic) DataModel *pageDataModel;
 
 @end
